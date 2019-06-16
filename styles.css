@@ -4,26 +4,41 @@
   padding: 0;
 }
 
+html{
+  font-size: 62.5%;
+}
+
 body{
-  /* font-size: 62.5%; */
+  font-size: 1.4rem;
+  color: #141414;
+  overflow-x: hidden;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+/* SETS WIDTH */
+header,
+.row{
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* STYLES FOR HEADER */
-header{
+header .top-header{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 nav{
-  padding: 10px 0;
+  margin-top: 2rem;
 }
 
 nav ul{
   display: flex;
   justify-content: space-between;
   list-style: none;
-  border-bottom: 1px solid #808080;
+  border-bottom: .1rem solid #808080;
 }
 
 nav ul li a,
@@ -31,21 +46,101 @@ nav ul li a:visited,
 nav ul li a:active{
   color: #000;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
 nav ul li a:hover{
-  border-bottom: 1px solid #000;
+  border-bottom: .1rem solid #000;
 }
 
 header .lloyds-title{
   background-color: #000;
   color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 header input{
+  margin-top: 2rem;
+}
 
+header .header-tabs ul{
+  display: flex;
+  justify-content: center;
+}
+
+header .header-tabs ul li{
+  display: inline-block;
+  border: solid .1rem black;
+  padding: 1rem 4rem;
+  margin-right: .1rem;
+}
+
+header .header-tab{
+  background-color: #282f54;
+  padding: 1rem;
+}
+
+header .header-tab a{
+  /* padding: 1rem; */
+}
+
+header .header-tab a,
+header .header-tab a:hover,
+header .header-tab a:visited,
+header .header-tab a:active,
+header .header-tab a:focus{
+  color: #fff;
+}
+
+
+/* HEADING SECTION */
+#heading-section{
+  background-color: #d5d5d5;
+}
+
+.upper-text,
+.upper-text a,
+.upper-text a:hover,
+.upper-text a:visited,
+.upper-text a:active,
+.upper-text a:focus{
+  color: #909090;
+  display: inline-block;
+  margin: 2rem 0;
+  text-decoration: none;
+}
+
+
+
+.heading-box h1{
+  color: #262626;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.heading-box .share{
+  display: inline-block;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.heading-box .share i{
+  margin-right: 1rem;
+}
+
+
+/* DOWNLOAD SECTION */
+#download-section{
+
+}
+
+.intro-column{
+  padding: 2rem 0 0 0;
 }
