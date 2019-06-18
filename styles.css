@@ -49,11 +49,15 @@ nav ul li a:hover{
   margin: 0 1rem;
 }
 
+nav ul li:not(:last-child){
+  border-right: 1px solid grey;
+}
+
 header .lloyds-title{
   background-color: #000;
   color: #fff;
   font-size: 2rem;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -64,8 +68,23 @@ header .lloyds-title p{
   margin: 0;
 }
 
+header .search{
+  align-self: stretch;
+  margin-bottom: 1rem;
+}
+
 header input{
-  margin-top: 2rem;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  height: 100%;
+  text-indent: 2rem;
+}
+
+header input::placeholder{
+  margin-left: 2rem;
 }
 
 header .header-tabs{
@@ -81,18 +100,22 @@ header .header-tab{
   padding: 1rem;
 }
 
-header .header-tab a{
-  /* padding: 1rem; */
-}
-
-header .header-tab a,
-header .header-tab a:hover,
-header .header-tab a:visited,
-header .header-tab a:active,
-header .header-tab a:focus{
+header .header-tab,
+header .header-tab:visited,
+header .header-tab:active,
+header .header-tab:focus{
   color: #fff;
 }
 
+header .header-tabs .active{
+  background-color: #dfe0e6;
+  color: #282f54;
+}
+
+header .header-tab:hover{
+  color: #141414;
+  background-color: #f1f1f1;
+}
 
 /* HEADING SECTION */
 #heading-section{
@@ -180,21 +203,39 @@ header .header-tab a:focus{
 
 footer ul{
   list-style: none;
-  margin: 3rem 0;
+  margin: 2rem 0;
+  display: flex;
+  /* justify-content: flex-start; */
 }
 
 footer ul li{
-  display: inline-block;
+  margin-right: 1rem;
 }
 
 footer ul li a{
   color: #fff;
   text-decoration: none;
+  margin-right: .5rem;
 }
 
-/* .footer-nav{
-  margin-bottom: 4rem;
-} */
+footer ul li a:hover,
+footer ul li a:visited,
+footer ul li a:active,
+footer ul li a:focus{
+  color: #fff;
+}
+
+footer .icon-list{
+  margin-bottom: 0;
+  /* display: flex;
+  justify-content: flex-start; */
+}
+
+footer .icon-list li{
+  padding: 0;
+  margin: 0 2rem 0 0;
+  /* margin-right: 2rem; */
+}
 
 .footer-nav li:not(:last-child){
   border-right: 1px solid #fff;
@@ -205,6 +246,6 @@ footer ul li a{
   padding-left: .5rem;
 }
 
-/* footer ul li a i{
-  padding: 2rem;
-} */
+footer ul li a img{
+  padding: 1rem;
+}
