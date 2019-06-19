@@ -24,6 +24,10 @@ header,
 }
 
 /* STYLES FOR HEADER */
+header{
+  position: relative;
+}
+
 header .top-header{
   display: flex;
   justify-content: center;
@@ -81,6 +85,10 @@ header input{
   border-top: none;
   height: 100%;
   text-indent: 2rem;
+  background-image: url("svg/magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
 }
 
 header input::placeholder{
@@ -120,6 +128,7 @@ header .header-tab:hover{
 /* HEADING SECTION */
 #heading-section{
   background-color: #f1f1f1;
+  z-index: 1;
 }
 
 .upper-text,
@@ -133,8 +142,6 @@ header .header-tab:hover{
   margin: 2rem 0;
   text-decoration: none;
 }
-
-
 
 .heading-box h1{
   color: #262626;
@@ -156,10 +163,6 @@ header .header-tab:hover{
 
 
 /* DOWNLOAD SECTION */
-#download-section{
-
-}
-
 .intro-column{
   padding: 2rem 0 0 0;
 }
@@ -174,7 +177,6 @@ header .header-tab:hover{
 }
 
 .description-container{
-  /* padding: 0 4rem; */
   margin: 0 10rem 0 4rem;
 
 }
@@ -205,7 +207,6 @@ footer ul{
   list-style: none;
   margin: 2rem 0;
   display: flex;
-  /* justify-content: flex-start; */
 }
 
 footer ul li{
@@ -226,15 +227,12 @@ footer ul li a:focus{
 }
 
 footer .icon-list{
-  margin-bottom: 0;
-  /* display: flex;
-  justify-content: flex-start; */
+  margin: 3rem 0;
 }
 
 footer .icon-list li{
   padding: 0;
   margin: 0 2rem 0 0;
-  /* margin-right: 2rem; */
 }
 
 .footer-nav li:not(:last-child){
@@ -247,5 +245,39 @@ footer .icon-list li{
 }
 
 footer ul li a img{
+  width: 2.5rem;
+}
+
+footer .facebook-icon{
+  background-color: #fff;
+}
+
+
+/* HOVER PANELS----SHOULD MAYBE MOVE THIS CODE TO TABS SECTION */
+
+.hover-panel{
+  position: absolute;
+  max-width: 100rem;
+  top: 100%;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+  z-index: -1;
+  padding-bottom: 1.5rem;
+}
+
+.hover-panel h3{
+  margin: 2rem 0;
+  font-size: inherit;
+}
+
+.hover-panel hr{
+  background-color: #141414;
+  margin-bottom: 3rem;
+}
+
+.hover-panel .links-box a{
+  display: inline-block;
+  width: 100%;
+  color: #141414;
   padding: 1rem;
 }

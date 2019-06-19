@@ -44,7 +44,7 @@
     </div>
 
     <div class="row p-0 mb-0 header-tabs">
-      <a class="col header-tab text-center active" href="">
+      <a class="col header-tab text-center active" onmouseover="onHoverOverTab()" onmouseout="onClosePanel()" href="">
         News and risk insight
       </a>
       <a class="col header-tab text-center" href="">
@@ -59,6 +59,84 @@
       <a class="col header-tab text-center" href="">
         Lloyd's around the world
       </a>
+
+      <!-- ONHOVER PANELS -->
+
+      <div class="container hover-panel" onmouseover="onHoverOverTab()" onmouseout="onClosePanel()" id="news-panel">
+        <div class="row d-flex flex-column">
+          <div class="col">
+            <h3>News and risk insight</h3>
+            <hr>
+          </div>
+
+          <div class="links-box d-flex">
+            <div class="col">
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/press-releases">
+                  Press releases
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/events">
+                  Events
+                </a>
+              </div>
+
+              <div>
+                <a href="https://cityriskindex.lloyds.com/">
+                  City risk index
+                </a>
+              </div>
+
+              <div>
+                <a href="https://futureat.lloyds.com/prospectus/home/">
+                  Future at Lloyd's
+                </a>
+              </div>
+            </div>
+
+            <div class="col">
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/news">
+                  News
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.lloydsbrussels.com/">
+                  Lloyd's subsidiary in Brussels
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/consumer-alerts">
+                  Consumer alerts
+                </a>
+              </div>
+            </div>
+
+            <div class="col">
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/risk-reports">
+                  Risk reports
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.lloydslab.com/">
+                  Lloyd's lab
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.lloyds.com/news-and-risk-insight/media-centre">
+                  Media centre
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -157,7 +235,6 @@
               <a href="https://www.lloyds.com/common/terms-and-conditions">Terms &amp; Conditions</a>
             </li>
             <li>
-              <!-- Need to figure out Downloads...same with display box button -->
               <a href="#">Modern Slavery Act</a>
             </li>
             <li>
@@ -181,7 +258,7 @@
             </li>
             <li>
               <a href="https://www.facebook.com/lloyds">
-                <img src="svg/facebook.svg" alt="Facebook Icon">
+                <img class="facebook-icon" src="svg/facebook.svg" alt="Facebook Icon">
               </a>
             </li>
             <li>
@@ -201,5 +278,8 @@
       </div>
     </div>
   </footer>
+
+
+  <script src="index.js"></script>
 </body>
 </html>
