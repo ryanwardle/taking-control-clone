@@ -97,6 +97,7 @@ header input::placeholder{
 
 header .header-tabs{
   border-top: solid 1px black;
+  margin-top: 1.5rem;
 }
 
 header .header-tabs .header-tab:not(:last-child){
@@ -159,6 +160,11 @@ header .header-tab:hover{
 
 .heading-box .share i{
   margin-right: 1rem;
+}
+
+/* RESPONSIVE NAVIGATION */
+.responsive-nav{
+  display: none;
 }
 
 
@@ -256,6 +262,7 @@ footer .facebook-icon{
 /* HOVER PANELS----SHOULD MAYBE MOVE THIS CODE TO TABS SECTION */
 
 .hover-panel{
+  visibility: hidden;
   position: absolute;
   max-width: 100rem;
   top: 100%;

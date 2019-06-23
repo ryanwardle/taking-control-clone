@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1056px){
+  /* RESPONSIVE NAVIGATION */
+  .responsive-nav{
+    display: flex;
+  }
+
+  .responsive-nav .responsive-lloyds-title{
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 1rem 1rem 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .responsive-nav ul{
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+  }
+
+  .responsive-nav ul li img{
+    width: 2rem;
+    margin: 1rem;
+  }
+
+  
+
+  header .top-header{
+    display: none;
+  }
+
+  header .header-tabs{
+    display: none;
+  }
+
+  #heading-section .heading-box,
+  #download-section .intro-column p{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .display-box .image-container{
+    display: none;
+  }
+
+  #download-section .display-box .description-container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  footer .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
