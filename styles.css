@@ -1,5 +1,6 @@
 *{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -29,9 +30,15 @@ header{
 }
 
 header .top-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav{
@@ -40,8 +47,12 @@ nav{
 
 nav ul{
   font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
 }
 
@@ -63,8 +74,12 @@ header .lloyds-title{
   font-size: 2rem;
   margin: 0 1rem 1rem 1rem;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
 }
 
@@ -73,7 +88,9 @@ header .lloyds-title p{
 }
 
 header .search{
-  align-self: stretch;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   margin-bottom: 1rem;
 }
 
@@ -89,6 +106,18 @@ header input{
   background-repeat: no-repeat;
   background-position: right;
   background-size: 3rem;
+}
+
+header input::-webkit-input-placeholder{
+  margin-left: 2rem;
+}
+
+header input:-ms-input-placeholder{
+  margin-left: 2rem;
+}
+
+header input::-ms-input-placeholder{
+  margin-left: 2rem;
 }
 
 header input::placeholder{
@@ -182,12 +211,15 @@ header .header-tab:hover{
 }
 
 .display-box{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 3rem 0 6rem 0;
 }
 
 .image-container img{
-  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+          box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
 }
 
 .description-container{
@@ -220,6 +252,8 @@ header .header-tab:hover{
 footer ul{
   list-style: none;
   margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -274,7 +308,8 @@ footer .facebook-icon{
   max-width: 100rem;
   top: 100%;
   background-color: #f1f1f1;
-  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+          box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
   z-index: -1;
   padding-bottom: 1.5rem;
 }

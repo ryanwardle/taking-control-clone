@@ -1,6 +1,8 @@
 @media only screen and (max-width: 1056px){
   /* RESPONSIVE HEADER */
   .responsive-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -10,14 +12,20 @@
     font-size: 2rem;
     margin: 0 1rem 1rem 1rem;
     padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-transform: uppercase;
   }
 
   .responsive-header ul{
     list-style: none;
     margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -54,7 +62,9 @@
   }
 
   .responsive-header-tabs .card-header h5{
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin: 1rem;
   }
 
@@ -144,8 +154,13 @@
   }
 
   footer .footer-nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .footer-nav li{
