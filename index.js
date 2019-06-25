@@ -9,8 +9,6 @@ onClosePanel = () => {
 }
 
 
-
-
 onToggleNavigation = () => {
   let headers = document.getElementById('accordion');
   let navigation = document.getElementById('responsive-navigation');
