@@ -1,10 +1,10 @@
 @media only screen and (max-width: 1056px){
-  /* RESPONSIVE NAVIGATION */
-  .responsive-nav{
+  /* RESPONSIVE HEADER */
+  .responsive-header{
     display: flex;
   }
 
-  .responsive-nav .responsive-lloyds-title{
+  .responsive-header .responsive-lloyds-title{
     background-color: #000;
     color: #fff;
     font-size: 2rem;
@@ -15,18 +15,16 @@
     text-transform: uppercase;
   }
 
-  .responsive-nav ul{
+  .responsive-header ul{
     list-style: none;
     margin-left: auto;
     display: flex;
   }
 
-  .responsive-nav ul li img{
+  .responsive-header ul li img{
     width: 2rem;
     margin: 1rem;
   }
-
-  
 
   header .top-header{
     display: none;
@@ -34,6 +32,93 @@
 
   header .header-tabs{
     display: none;
+  }
+
+
+  /* RESPONSIVE HEADER TABS */
+  .responsive-header-tabs img{
+    width: 2rem;
+  }
+
+  #accordian{
+    background-color: #282f54;
+  }
+
+  .responsive-header-tabs .card{
+    background-color: #282f54;
+    border-bottom: 1px solid #fff;
+  }
+
+  .responsive-header-tabs .card-header{
+    min-height: 5rem;
+  }
+
+  .responsive-header-tabs .card-header h5{
+    align-self: center;
+    margin: 1rem;
+  }
+
+  .responsive-header-tabs .card img{
+    color: #fff;
+  }
+
+  .responsive-header-tabs .card a,
+  .responsive-header-tabs .card a:visited,
+  .responsive-header-tabs .card a:active,
+  .responsive-header-tabs .card a:hover,
+  .responsive-header-tabs .card a:focus{
+    text-decoration: none;
+    color: #fff;
+    background-color: #282f54;
+  }
+
+  .responsive-header-tabs .card-body{
+    color: #141414;
+    background-color: #dfe0e6;
+  }
+
+  .responsive-header-tabs .card-body ul{
+    list-style: none;
+  }
+
+  .responsive-header-tabs .card-body ul li{
+    padding: 1rem 0;
+  }
+
+  .responsive-header-tabs .card .card-body ul li a{
+    color: #141414;
+    border-bottom: 1px solid #fff;
+    background-color: #dfe0e6;
+    width: 100%;
+    display: inline-block;
+  }
+
+/* RESPONSIVE NAVIGATION */
+  header .responsive-nav ul{
+    font-size: 1.6rem;
+  }
+
+  header .responsive-nav ul li{
+    border-right: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 1rem;
+  }
+
+  header .responsive-nav ul li a{
+    display: inline-block;
+    width: 100%;
+  }
+
+  header .responsive-nav ul li a:hover{
+    text-decoration: none;
+  }
+
+  header #responsive-search input{
+    min-height: 4rem;
+  }
+
+  #news-and-risk-insight-panel{
+    visibility: hidden;
   }
 
   #heading-section .heading-box,
@@ -56,5 +141,18 @@
   footer .container{
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  footer .footer-nav{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-nav li{
+    margin: 1rem;
+  }
+
+  .footer-nav li:not(:last-child){
+    border: none;
   }
 }

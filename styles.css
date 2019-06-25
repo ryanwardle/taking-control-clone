@@ -163,7 +163,15 @@ header .header-tab:hover{
 }
 
 /* RESPONSIVE NAVIGATION */
-.responsive-nav{
+.hidden{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.responsive-header{
   display: none;
 }
 
@@ -262,7 +270,6 @@ footer .facebook-icon{
 /* HOVER PANELS----SHOULD MAYBE MOVE THIS CODE TO TABS SECTION */
 
 .hover-panel{
-  visibility: hidden;
   position: absolute;
   max-width: 100rem;
   top: 100%;

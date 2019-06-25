@@ -39,9 +39,9 @@
       </div>
     </div>
 
-    <!-- RESPONSIVE NAVIGATION -->
+    <!-- RESPONSIVE HEADER -->
 
-    <div class="responsive-nav">
+    <div class="responsive-header">
       <div class="responsive-lloyds-title">
         <p class="mb-0">Lloyd's</p>
       </div>
@@ -53,32 +53,600 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a onclick="onToggleSearch()" href="#">
             <img src="svg/magnifying-glass.svg" alt="Magnifying glass">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a onclick="onToggleNavigation()" href="#">
             <img src="svg/menu-button-of-three-horizontal-lines.svg" alt="responsive nav button">
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="row p-0 mb-0 header-tabs">
-      <a class="col header-tab news-and-risk-insight text-center active" onmouseover="getPanelId()" onmouseout="onClosePanel()" href="https://www.lloyds.com/news-and-risk-insight">
+    <!-- RESPONSIVE SEARCH -->
+    <div class="hidden" id="responsive-search">
+      <input class="w-100" type="search" placeholder="Search">
+    </div>
+
+    <!-- RESPONSIVE HEADER TABS -->
+    <div id="accordion" class="responsive-header-tabs hidden">
+        <div class="card">
+          <div class="card-header p-0 d-flex justify-content-between align-content-center">
+            <h5 class="w-100">
+              <a class="w-100 d-inline-block" href="https://www.lloyds.com/news-and-risk-insight">
+                News and risk insight
+              </a>
+            </h5>
+            <h5>
+              <a href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+                <img src="svg/add.svg" alt="plus sign">
+              </a>
+            </h5>
+          </div>
+          <div class="collapse" id="collapse-1">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/press-releases">
+                    Press releases
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/news">
+                    News
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/risk-reports">
+                    Risk reports
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/events">
+                    Events
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloydsbrussels.com/">
+                    Lloyd's subsidiary in Brussels
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloydslab.com/">
+                    Lloyd's lab
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cityriskindex.lloyds.com/">
+                    City risk index
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/consumer-alerts">
+                    Consumer alerts
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/news-and-risk-insight/media-centre">
+                    Media centre
+                  </a>
+                </li>
+                <li>
+                  <a href="https://futureat.lloyds.com/prospectus/home/">
+                    Future at Lloyd's
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+          <div class="card-header p-0 d-flex justify-content-between">
+            <h5 class="w-100">
+              <a class="w-100 d-inline-block" href="https://www.lloyds.com/market-directory">
+                Market directory
+              </a>
+            </h5>
+            <h5>
+              <a href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+                <img src="svg/add.svg" alt="plus sign">
+              </a>
+            </h5>
+          </div>
+
+          <div class="collapse" id="collapse-2">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&bro_num=&pseudo=&name=&loc=&bro=1&cov=0&man=0&mem=0&omc=0&run=0">
+                    Brokers
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&bro_num=&pseudo=&name=&loc=&bro=0&cov=1&man=0&mem=0&omc=0&run=0">
+                    Coverholders
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&name=&ltti=&fca_num=&loc=&bro=0&cov=0&man=1&mem=0&omc=0&run=0">
+                    Managing agents
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=man&cobc=0&cob=&name=&syn_num=&loc=&bro=0&cov=0&man=0&mem=1&omc=0&run=0">
+                    Members' agents
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=mem&name=&loc=&bro=0&cov=0&man=0&mem=0&omc=1&run=0">
+                    Open Market Correspondents
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/results?mode=omc&name=&loc=&bro=0&cov=0&man=0&mem=0&omc=0&run=1">
+                    Run off brokers
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-directory/committees-,-a-,-associations">
+                    Committiees and associations
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-header p-0 d-flex justify-content-between">
+            <h5 class="w-100">
+              <a class="w-100 d-inline-block" href="https://www.lloyds.com/market-resources">
+                Market resources
+              </a>
+            </h5>
+            <h5>
+              <a href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+                <img src="svg/add.svg" alt="plus sign">
+              </a>
+            </h5>
+          </div>
+
+          <div class="collapse" id="collapse-3">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/capital-and-reserving">
+                    Capital and reserving
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/claims">
+                    Claims
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/underwriting">
+                    Complaints
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/data-and-research">
+                    Data and research
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/delegated-authorities">
+                    Delegated Authorities
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/finance-and-investment">
+                    Finance and investment
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/lloyds-agency">
+                    Lloyd's Agency
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/market-communications">
+                    Market communications
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/market-services">
+                    Market services
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/professional-development">
+                    Professional development
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/regulatory">
+                    Regulatory
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/requirements-and-standards">
+                    Requirements and standards
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/tax">
+                    Tax
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/underwriting">
+                    Underwriting
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="card">
+          <div class="card-header p-0 d-flex justify-content-between">
+            <h5 class="w-100">
+              <a class="w-100 d-inline-block" href="https://www.lloyds.com/tools-and-systems">
+                Tools and systems
+              </a>
+            </h5>
+            <h5>
+              <a href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
+                <img src="svg/add.svg" alt="plus sign">
+              </a>
+            </h5>
+          </div>
+
+          <div class="collapse" id="collapse-4">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/aims">
+                    AiMS
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/atlas">
+                    Atlas
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/bars">
+                    Binding Authority Registration
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/business-timetable">
+                    Business timetable
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/chorus">
+                    Chorus
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/core-market-returns-cmr">
+                    Core Market Returns
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/crystal">
+                    Crystal
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/doprint">
+                    Doprint
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/market-resources/market-services/useful-information/funds-at-lloyds">
+                    Funds at Lloyd's
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/canada/lineage-and-accounting-and-settlement">
+                    Lineage
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/lloyds-wordings-repository">
+                    Lloyd's wordings repository
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/member-modelling-software">
+                    Member modelling software
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/mocha">
+                    Mocha
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/quality-assurance-qa-tools">
+                    Quality assurance tools
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/risk-locator">
+                    Risk locator
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/secure-store">
+                    Secure store
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/tools-and-systems/workbench">
+                    Workbench
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-0 d-flex justify-content-between">
+            <h5 class="w-100">
+              <a class="w-100 d-inline-block" href="https://www.lloyds.com/lloyds-around-the-world">
+                Lloyd's around the world
+              </a>
+            </h5>
+            <h5>
+              <a href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
+                <img src="svg/add.svg" alt="plus sign">
+              </a>
+            </h5>
+          </div>
+
+          <div class="collapse" id="collapse-5">
+            <div class="card-body">
+              <h5>Africa and Middle East</h5>
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/dubai">
+                    Dubai
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/africa/maroc">
+                    Maroc
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/africa/namibia">
+                    Namibia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/africa/south-africa">
+                    South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/africa/zimbabwe">
+                    Zimbabwe
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Americas</h5>
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/argentina">
+                    Argentina
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/brazil-em-portugues">
+                    Brazil
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/canada-french-version">
+                    Canada
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/colombia_esp">
+                    Columbia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/mexico">
+                    Mexico
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/americas/us-homepage">
+                    United States of America
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Asia and Pacific</h5>
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/australasia/australia">
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/china">
+                    China
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/hong-kong">
+                    Hong Kong
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/india">
+                    India
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/japan">
+                    Japan
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/australasia/new-zealand">
+                    New Zealand
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/asia/singapore">
+                    Singapore
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Europe</h5>
+              <ul>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/osterreich-auf-deutsch">
+                    Austria
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloydsbrussels.com/">
+                    Brussels European HQ
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/nordics">
+                    Denmark
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/le-lloyds-en-france">
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/deutschland">
+                    Germany
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/israel">
+                    Israel
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/italia">
+                    Italy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/lithuania">
+                    Lithuania
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/malta">
+                    Malta
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/nederland">
+                    Netherlands
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/nordics">
+                    Norway
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/polska">
+                    Poland
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/espana">
+                    Spain
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/nordics">
+                    Sweden
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/die-schweiz-auf-deutsch">
+                    Switzerland
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lloyds.com/lloyds-around-the-world/europe/uk">
+                    United Kingdom
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <!-- RESPONSIVE NAVIGATION -->
+    <nav id="responsive-navigation" class="responsive-nav mt-0 hidden">
+      <div class="w-100">
+        <ul class="d-flex flex-column">
+          <li><a href="https://www.lloyds.com/about-lloyds">About</a></li>
+          <li><a href="https://www.lloyds.com/about-lloyds/value_proposition_broker">Brokers</a></li>
+          <li><a href="https://www.lloyds.com/about-lloyds/value_proposition_coverholder">Coverholders</a></li>
+          <li><a href="https://www.lloyds.com/about-lloyds/value_proposition_insurer">Insurers</a></li>
+          <li><a href="https://www.lloyds.com/policyholder">Policyholders</a></li>
+          <li><a href="https://www.lloyds.com/careers">Careers</a></li>
+          <li><a href="https://www.lloyds.com/investor-relations">Investor Relations</a></li>
+          <li><a href="https://www.lloyds.com/contact-us">Contact</a></li>
+          <li><a href="https://secure.lloyds.com/login">Login/register</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="headers" class="row p-0 mb-0 header-tabs">
+      <a class="col header-tab news-and-risk-insight text-center active" onmouseover="onHoverOverTab()" onmouseout="onClosePanel()" href="https://www.lloyds.com/news-and-risk-insight">
         News and risk insight
       </a>
-      <a class="col header-tab text-center market-directory" onmouseover="getPanelId()" onmouseout="onClosePanel()" href="https://www.lloyds.com/market-directory">
+      <a class="col header-tab text-center market-directory"  href="https://www.lloyds.com/market-directory">
         Market directory
       </a>
-      <a class="col header-tab text-center market-resources" onmouseover="getPanelId()" onmouseout="onClosePanel()" href="https://www.lloyds.com/market-resources">
+      <a class="col header-tab text-center market-resources"  href="https://www.lloyds.com/market-resources">
         Market resources
       </a>
-      <a class="col header-tab text-center tools-and-systems" onmouseover="getPanelId()" onmouseout="onClosePanel()" href="https://www.lloyds.com/tools-and-systems">
+      <a class="col header-tab text-center tools-and-systems"  href="https://www.lloyds.com/tools-and-systems">
         Tools and systems
       </a>
-      <a class="col header-tab text-center lloyds-around-the-world" onmouseover="getPanelId()" onmouseout="onClosePanel()" href="https://www.lloyds.com/lloyds-around-the-world">
+      <a class="col header-tab text-center lloyds-around-the-world"  href="https://www.lloyds.com/lloyds-around-the-world">
         Lloyd's around the world
       </a>
     </div>
@@ -86,7 +654,7 @@
       <!-- ONHOVER PANELS -->
       <!-- NEWS AND INSIGHT PANEL -->
 
-      <div class="container hover-panel" onmouseover="onKeepTabOpen()" onmouseout="onClosePanel()" id="news-and-risk-insight-panel">
+      <div class="container hover-panel" onmouseover="onHoverOverTab()" onmouseout="onClosePanel()" id="news-and-risk-insight-panel">
         <div class="row d-flex flex-column">
           <div class="col">
             <h3>News and risk insight</h3>
@@ -159,338 +727,6 @@
                 </a>
               </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MARKET DIRECTORY PANEL -->
-
-    <div class="container hover-panel" onmouseover="onKeepTabOpen()" onmouseout="onClosePanel()" id="market-directory-panel">
-      <div class="row d-flex flex-column">
-        <div class="col">
-          <h3>Market directory</h3>
-          <hr>
-        </div>
-
-        <div class="links-box d-flex">
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&bro_num=&pseudo=&name=&loc=&bro=1&cov=0&man=0&mem=0&omc=0&run=0">
-                Brokers
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=man&cobc=0&cob=&name=&syn_num=&loc=&bro=0&cov=0&man=0&mem=1&omc=0&run=0">
-                Members' agents
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-directory/committees-,-a-,-associations">
-                Committiees and associations
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&bro_num=&pseudo=&name=&loc=&bro=0&cov=1&man=0&mem=0&omc=0&run=0">
-                Coverholders
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=mem&name=&loc=&bro=0&cov=0&man=0&mem=0&omc=1&run=0">
-                Open Market Correspondents
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=bro&cobc=0&cob=&name=&ltti=&fca_num=&loc=&bro=0&cov=0&man=1&mem=0&omc=0&run=0">
-                Managing agents
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-directory/results?mode=omc&name=&loc=&bro=0&cov=0&man=0&mem=0&omc=0&run=1">
-                Run off brokers
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MARKET RESOURCES PANEL -->
-
-    <div class="container hover-panel" onmouseover="onKeepTabOpen()" onmouseout="onClosePanel()" id="market-resources-panel">
-      <div class="row d-flex flex-column">
-        <div class="col">
-          <h3>Market resources</h3>
-          <hr>
-        </div>
-
-        <div class="links-box d-flex">
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/capital-and-reserving">
-                Capital and reserving
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/data-and-research">
-                Data and research
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/lloyds-agency">
-                Lloyd's Agency
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/professional-development">
-                Professional development
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/tax">
-                Tax
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/claims">
-                Claims
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities">
-                Delegated Authorities
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/market-communications">
-                Market communications
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/regulatory">
-                Regulatory
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/underwriting">
-                Underwriting
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/underwriting">
-                Complaints
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/finance-and-investment">
-                Finance and investment
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/market-services">
-                Market services
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/requirements-and-standards">
-                Requirements and standards
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOOLS AND SYSTEMS PANEL -->
-
-    <div class="container hover-panel" onmouseover="onKeepTabOpen()" onmouseout="onClosePanel()" id="tools-and-systems-panel">
-      <div class="row d-flex flex-column">
-        <div class="col">
-          <h3>Tools and systems</h3>
-          <hr>
-        </div>
-
-        <div class="links-box d-flex">
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/aims">
-                AiMS
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/business-timetable">
-                Business timetable
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/crystal">
-                Crystal
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/lloyds-around-the-world/americas/canada/lineage-and-accounting-and-settlement">
-                Lineage
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/mocha">
-                Mocha
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/secure-store">
-                Secure store
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/atlas">
-                Atlas
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/chorus">
-                Chorus
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/doprint">
-                Doprint
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/lloyds-wordings-repository">
-                Lloyd's wordings repository
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/quality-assurance-qa-tools">
-                Quality assurance tools
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/workbench">
-                Workbench
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/bars">
-                Binding Authority Registration
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/core-market-returns-cmr">
-                Core Market Returns
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/market-resources/market-services/useful-information/funds-at-lloyds">
-                Funds at Lloyd's
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/member-modelling-software">
-                Member modelling software
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/risk-locator">
-                Risk locator
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOOLS AND SYSTEMS PANEL -->
-
-    <div class="container hover-panel" onmouseover="onKeepTabOpen()" onmouseout="onClosePanel()" id="tools-and-systems-panel">
-      <div class="row d-flex flex-column">
-        <div class="col">
-          <h3>Tools and systems</h3>
-          <hr>
-        </div>
-
-        <div class="links-box d-flex">
-          <div class="col">
-            <div>
-              <a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/aims">
-                Africa and Middle East
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/business-timetable">
-                Americas
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/tools-and-systems/crystal">
-                Asia and Pacific
-              </a>
-            </div>
-
-            <div>
-              <a href="https://www.lloyds.com/lloyds-around-the-world/americas/canada/lineage-and-accounting-and-settlement">
-                Europe
-              </a>
-            </div>
-          </div>
-
-
-<!-- ON HOVER I NEED TO MAKE THE COUNTRIES APPEAR -->
-          <div class="col"></div>
-
-          <div class="col"></div>
-
-          <div class="col"></div>
         </div>
       </div>
     </div>
@@ -633,7 +869,12 @@
     </div>
   </footer>
 
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>
 </html>

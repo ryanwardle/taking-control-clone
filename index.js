@@ -1,36 +1,41 @@
-getPanelId = () =>{
-  const classList = event.target.className.split(' ');
-  const panelId = event.target.innerText.replace(/ /g, "-").toLowerCase();
-  console.log(classList)
-  console.log(panelId)
-  if(classList.includes(panelId)){
-    console.log('yes')
-    onHoverOverTab(panelId +'-panel');
-  }
-}
-
-onHoverOverTab = (panelId) => {
-  const panel = document.getElementById(panelId);
+onHoverOverTab = () => {
+  const panel = document.getElementById('news-and-risk-insight-panel');
   panel.style.zIndex = '10';
-  panel.style.visibility = 'visible'
 }
 
 onClosePanel = () => {
-  // const classList = event.target.className.split(' ');
-  // const panelId = event.target.innerText.replace(/ /g, "-").toLowerCase();
-  // const panel = document.getElementById(panelId);
-  // panel.style.zIndex = '-1';
-  // console.log(event)
-
-  const panel = document.getElementById();
+  const panel = document.getElementById('news-and-risk-insight-panel');
   panel.style.zIndex = '-1';
-  panel.style.visibility = 'hidden';
-
-  console.log(event)
-
 }
 
-// onKeepTabOpen = () =>{
-//   const panel = document.getElementById(panelId);
-//   panel.style.zIndex = '10';
-// }
+
+
+
+onToggleNavigation = () => {
+  let headers = document.getElementById('accordion');
+  let navigation = document.getElementById('responsive-navigation');
+
+  if( headers.classList.contains('hidden')){
+     headers.classList.remove('hidden');
+     headers.classList.add('show');
+     navigation.classList.remove('hidden');
+     navigation.classList.add('show');
+  }else{
+    headers.classList.remove('show');
+    headers.classList.add('hidden');
+    navigation.classList.remove('show');
+    navigation.classList.add('hidden');
+  }
+}
+
+onToggleSearch = () => {
+  let search = document.getElementById('responsive-search');
+
+  if( search.classList.contains('hidden')){
+     search.classList.remove('hidden');
+     search.classList.add('show');
+  }else{
+    search.classList.remove('show');
+    search.classList.add('hidden');
+  }
+}
